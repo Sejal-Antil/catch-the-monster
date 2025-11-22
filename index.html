@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Catch the Monster!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Catch the Monster!</h1>
+
+    <div class="hud">
+      <div>Score: <span id="score">0</span></div>
+      <div>Time: <span id="time">30</span>s</div>
+    </div>
+
+    <div id="gameArea" class="game-area">
+      <div id="monster" class="monster" role="button" tabindex="0">👾</div>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn">Start</button>
+      <button id="stopBtn" disabled>Stop</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <footer>
+      Made for DevOps assignment — intentionally demonstrates Git workflows!
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
