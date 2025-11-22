@@ -9,7 +9,7 @@ body{
   margin:0;
   font-family:Inter, system-ui, Arial, sans-serif;
   background:var(--bg);
-  color:#222;
+  color:#0b1406;
 }
 .container{
   max-width:760px;
@@ -24,10 +24,10 @@ h1{text-align:center}
 .game-area{
   position:relative;
   height:340px;
-  border:2px dashed #e0e7ff;
+  border:2px dashed #213c94;
   border-radius:8px;
   overflow:hidden;
-  background:linear-gradient(180deg,#fff,#f7fbff);
+  background:linear-gradient(180deg,#e3f0be,#f7fbff);
 }
 .monster{
   position:absolute;
