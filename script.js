@@ -14,7 +14,7 @@ let moveInterval = null;
 
 // INTENTIONAL CONFLICT TARGET: speed variable
 // Default speed (ms between moves)
-let speed = 1000;
+let speed = 600;
 
 function randomPosition() {
   const rect = gameArea.getBoundingClientRect();
