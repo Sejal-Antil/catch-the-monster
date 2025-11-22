@@ -22,6 +22,12 @@ function randomPosition() {
   const y = Math.random() * (rect.height - 60) + 30;
   return { x, y };
 }
+function addWiggleEffect() {
+    const wiggleX = Math.random() * 20 - 10;
+    const wiggleY = Math.random() * 20 - 10;
+
+    monster.style.transform = `translate(${wiggleX}px, ${wiggleY}px)`;
+}
 
 function moveMonster() {
   const { x, y } = randomPosition();
@@ -30,16 +36,21 @@ function moveMonster() {
   // small pop animation
   monster.style.transform = 'translate(-50%,-50%) scale(1.15)';
   setTimeout(() => {
-    monster.style.transform = 'translate(-50%,-50%) scale(1)';
-  }, 120);
+    addWiggleEffect();
+    setTimeout(() => {
+        monster.style.transform = 'translate(-50%,-50%) scale(1)';
+    }, 120);
+  },120);
 }
+
+
 
 function startGame() {
   startBtn.disabled = true;
   stopBtn.disabled = false;
   resetBtn.disabled = true;
   score = 0;
-  timeLeft = 30;
+  timeLeft = 20;
   scoreEl.textContent = score;
   timeEl.textContent = timeLeft;
 
@@ -66,14 +77,14 @@ function stopGame() {
 
 function resetGame() {
   score = 0;
-  timeLeft = 30;
+  timeLeft = 20;
   scoreEl.textContent = score;
   timeEl.textContent = timeLeft;
   moveMonster();
 }
 
 monster.addEventListener('click', () => {
-  score += 1;
+  score += 2; // Increased from 1 point to 2 points for fast mode
   scoreEl.textContent = score;
 });
 
