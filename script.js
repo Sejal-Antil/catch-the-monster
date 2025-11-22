@@ -14,7 +14,11 @@ let moveInterval = null;
 
 // INTENTIONAL CONFLICT TARGET: speed variable
 // Default speed (ms between moves)
-let speed = 600;
+<<<<<<< HEAD
+let speed = 1000;  // resolved change
+=======
+let speed = 1600;
+>>>>>>> speed-turtle
 
 function randomPosition() {
   const rect = gameArea.getBoundingClientRect();
