@@ -15,7 +15,16 @@ let moveInterval = null;
 // INTENTIONAL CONFLICT TARGET: speed variable
 // Default speed (ms between moves)
 <<<<<<< HEAD
-let speed = 1000;  // resolved change
+//let speed = 1000;  // resolved change
+const difficultySelect = document.getElementById('difficulty');
+    let speed = parseInt(difficultySelect.value, 10);
+    difficultySelect.addEventListener('change', () => {
+    speed = parseInt(difficultySelect.value, 10);
+    if (moveInterval) {
+        clearInterval(moveInterval);
+        moveInterval = setInterval(moveMonster, speed);
+    }
+    });
 =======
 let speed = 1600;
 >>>>>>> speed-turtle
@@ -46,6 +55,7 @@ function moveMonster() {
     }, 120);
   },120);
 }
+    
 
 
 
